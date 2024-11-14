@@ -1,0 +1,552 @@
+
+/*--1.Navbar-----------------------------------------------------------------------*/
+
+#main_logo{
+
+    height: 40px;
+    width: 40px;
+    margin-top: -8px;
+    margin-left: 10px;
+
+}
+
+#title1{
+    margin-left: 5px;
+    margin-right: 22px;
+}
+
+.nav-item{
+    font-size: 20px;
+    a{
+        font-size: large;
+        color: black;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+}
+
+
+.nav-item a:hover{
+    color: #920622;
+}
+
+.navbar-text{
+    margin-right: 20px;
+}
+
+/*---------2. Middle Search Tab----------------------------------------------------------*/
+
+.Middle_box{
+    background-color: rgba(146, 6, 34, 0.9);
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.search_box{
+    background-color: white;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-left: 18%;
+
+    
+    #search_logo{
+        margin-top: 36px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 30px;
+    }
+
+    input{
+        font-size: 28px;
+        width: 200px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    #Search_button{
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        margin-left: 20px;
+        font-weight: bolder;
+        cursor: pointer;
+        border-left: 1px solid black;
+        background-color: black;
+        color: white;
+    }
+
+    #Search_button:hover{
+        background-color: grey;
+        color: black;
+        border-left: 1px solid grey;
+    }
+}
+
+/*-----3. Trending offer-----------------------------------------------------------------------------*/
+
+
+.slider_main{
+    margin-top: -70px;
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px;
+    
+
+    h2{
+        padding-top: 20px;
+        padding-left: 90px;
+    }
+}
+
+
+.slider{
+    display: flex;
+    justify-content: center;
+}
+
+.card1{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.card1:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+.card2{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.card2:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+.card3{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.card3:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+.card4{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.card4:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+
+
+/*--4. Weekend Offer-------------------------------------------------------------------------------------------*/
+
+.slider_main{
+    margin-top: -70px;
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px;
+    
+
+    #title{
+        margin-top: 50px;
+        padding-top: 40px;
+        padding-left: 80px;
+    }
+}
+
+
+.slider{
+    display: flex;
+    justify-content: center;
+}
+
+.card1{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.card1:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+.card2{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.card2:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+.card3{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.card3:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+.card4{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.card4:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+
+/*---5. Banner Image--------------------------------------------------------------------------------------------*/
+
+.image{    
+    margin-top: 50px;
+    margin-right: 29%;
+
+    
+
+    h1{
+        text-align: center;
+        margin-left: 380px;
+        margin-bottom: 40px;
+    }
+}
+
+#paragraph_logo{
+    width: 50px;
+    height: 50px;
+    margin-top: -17px;
+}
+
+#paragraph_title{
+    margin-left: 41%;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+#paragraph_p{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+/*-----6.Top City slide------------------------------------------------------------------------------------*/
+
+
+
+#button{
+    margin: 20px;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    margin-left: 57%;
+    margin-top: 20px;
+    font-size: 28px;
+    background-color: white;
+    color: #920622;
+    border-radius: 5px; 
+    transition: 0.3s ease-in-out;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid #920622;
+}
+
+#button:Hover{
+    opacity: 0.5;
+}
+
+
+
+#City_heading{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 29%;
+
+}
+
+.carousel-indicators{
+    height: 400px;
+    
+}
+
+.carousel-inner{
+    background-color: rgba(146, 6, 34, 0.9);
+    cursor: pointer;
+    
+}
+
+.city{
+    margin-left: 44%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+/*-----7.Partner with--------------------------------------------------------------------------------------------------------------*/
+
+
+.Partners{
+    margin-top: -70px;
+    background-color: white;
+    border-radius: 20px;
+    
+
+    #title{
+        margin-top: 100px;
+        margin-bottom: 30px;
+        padding-top: 40px;
+        padding-left: 40px;
+    }
+}
+
+
+.sliders{
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+    
+}
+
+.cards1{
+    margin-top: 17px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.cards1 img{
+    width: 150px;
+    height: 140px;
+}
+
+.cards1 p {
+    display: inline;
+    margin-left: 48px;
+    font-weight: bolder;
+}
+
+.cards1:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+.cards2{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.cards2 img{
+    width: 150px;
+    height: 140px;
+}
+
+.cards2 p {
+    margin-left: 52px;
+    font-weight: bolder;
+}
+
+.cards2:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+.cards3{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.cards3 img{
+    width: 150px;
+    height: 140px;
+}
+
+.cards3 p {
+    margin-left: 48px;
+    font-weight: bolder;
+}
+
+.cards3:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+.cards4{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.cards4 img{
+    width: 150px;
+    height: 140px;
+}
+
+.cards4 p {
+    margin-left: 53px;
+    font-weight: bolder;
+}
+
+.cards4:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+
+
+.cards5{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.cards5 img{
+    width: 150px;
+    height: 140px;
+}
+
+.cards5 p {
+    margin-left: 57px;
+    font-weight: bolder;
+}
+
+.cards5:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+
+
+.cards6{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.cards6 img{
+    width: 150px;
+    height: 140px;
+}
+
+.cards6 p {
+    margin-left: 48px;
+    font-weight: bolder;
+}
+
+.cards6:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+
+.cards7{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.cards7 img{
+    width: 150px;
+    height: 140px;
+}
+
+.cards7 p {
+    margin-left: 52px;
+    font-weight: bolder;
+}
+
+.cards7:hover{
+    img,p{
+    opacity: 0.5; }
+}
+
+/*----8. 2nd Banner image-----------------------------------------------------------------------------------------------------------------*/
+
+.img-fluid{
+    margin-left: 17%;
+}
+
+
+
+
+
+
+/*------9.Footer-----------------------------------------------------------------------------------------------------*/
+
+
+.card-text{
+
+    margin-left: 2px;
+
+    i{
+        font-size: 40px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+
+    i:Hover{
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
+
+.card-title{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.footer{
+    background-color: rgba(146, 6, 34, 0.9);
+    color: white;
+}

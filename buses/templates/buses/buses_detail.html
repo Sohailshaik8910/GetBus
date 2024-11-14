@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--<form action="{% url 'book' bus.id %}">-->
+
+<!----Ticket Details start----------------------------------------------------------------------->
+
+
+  <div  style=" margin-top: -82px; height: 200px; width: 100%; align-items: center; padding-right: 70px; display: flex; justify-content: space-between;   background: linear-gradient(0deg, rgba(95, 149, 165, 0.421) 0%, rgb(238, 244, 246) 100%) " >
+
+        <div>
+             <img src="{% static './images/ticket_bus.png' %}" width="400" alt="...">
+        </div>
+
+        <div style="margin-left: -70px; color: #500017;" >
+          <h3>{{bus.Bus_Name}}</h3>
+        </div>
+
+        <div >
+          <h5>{{bus.From}} To {{bus.To}}</h5>
+        </div>
+
+        <div>
+          <h5>{{bus.Bus_Type}} Bus</h5>
+        </div>
+
+        <div>
+          <h5> {{bus.Date}}</h5>
+        </div>
+
+        <div >
+          <h4><span style="color: rgb(34, 90, 24);" >Ticket Price:</span> {{bus.Price}}Rs</h4>
+        </div>  
+          
+  </div>
+
+  <!----Ticket Details End-------------------------------------------------------------------------->
+
+  <!----Booking Form Start --------------------------------------------------------------------------->
+  
+<!-- <form action="{% url 'book' bus.id %}"> -->
+<form action="{% url 'add-passenger' bus.id %}" method="post">
+
+  {% csrf_token %}
+
+  <div style=" font-size: 20px; width: 50%; height: 390px; margin-top: 30px; margin-left: 25%; margin-bottom: 50px; padding-left: 220px;  align-items: center; border: 1px solid black;  background: linear-gradient(0deg, rgba(165, 95, 95, 0.421) 0%, rgba(228, 217, 217, 0.777) 100%) ">
+
+    <h2 style="padding-top: 50px; margin-bottom: 30px;">Enter Passenger Details</h2>
+
+    <div style="margin-left: 50px; margin-bottom: 50px;">
+     <label for="">Enter Name</label><br>
+     <input type="text" name="name"><br>       
+    
+     <label for="">Enter Age</label><br>
+     <input style="margin-bottom: 15px;" type="number" name="age"> <br>
+     
+     <label for="">Gender:</label></td>
+     <label for="gender">Male </label><input name="gender" type="radio" value="Male">
+     <label for="gender">Female</label><input name="gender" type="radio" value="Female"><br><br>
+     <button style="margin-left: 77px;" class="btn btn-danger" type="submit">Book</button> 
+    </div>
+  
+    
+  
+  </div>
+</form> 
+
+
+<!----Booking Form End --------------------------------------------------------------------------->
+
+
+
+
+
+<!--RazorPay Button start------------------------------------------------------------------------------------------------>
+
+
+<!--RazorPay Button end------------------------------------------------------------------------------------------------>
+
+
+
+{% endblock %}

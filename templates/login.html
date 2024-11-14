@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+<form action="{% url 'login' %}" method="post">
+
+    {%csrf_token%}
+
+<div style="display: flex; flex-direction: row; margin-top: 120px; margin-bottom: 120px;">
+
+    <img src="{% static './images/bus.jpg' %}" height="350" alt="">
+   
+    <div class="login_div" style=" width: 21%; margin-left: 80px; font-size: 20px;" >
+
+      <h1 style="padding-left: 10px; padding-bottom: 30px;" >Login To Get<span style="color: rgba(146, 6, 34, 0.9);" >Bus</span></h1>
+      
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input style="border: 1px solid black" type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input style=" border: 1px solid black;" type="password" name="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button style=" margin-top: 15px; margin-left: 40%; border: none; padding: 10px; padding-left: 20px; padding-right: 20px; background-color: rgba(146, 6, 34, 0.9);" type="submit" class="btn btn-primary">Login</button>
+  </div>
+
+
+</div>
+  </form>
+
+{%endblock%}

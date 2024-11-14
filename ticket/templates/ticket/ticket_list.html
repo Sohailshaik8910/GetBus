@@ -1,0 +1,58 @@
+{% extends 'base.html' %} 
+
+
+{% block content %}
+
+
+<div style=" margin-left: 8%; margin-right: 10%; margin-bottom: 6.8%; ">
+
+
+    {% if request.user.username %}
+
+    <h1 style="margin-left: 70px;" >Your Booked Tickets</h1>
+
+      {% for i in ticket %}
+
+       {% if request.user == i.User %}
+      
+      <!--------Ticket Box Start------------------------------------------------------------------------------------------>
+
+       <div style="background: linear-gradient(0deg, rgba(95, 149, 165, 0.421) 0%, rgb(238, 244, 246) 100%);
+        padding: 20px;  margin-left: 5%; margin-right: 5%; margin-top: 5%; display: flex; flex-direction: row; justify-content: space-between;">
+        <i style="font-size: 180px; margin-top: px;" class="fa-solid fa-barcode"></i> 
+       <div style="margin-left: -42%;">
+        <h5 class=>Ticket No: {{i.Ticket_No}}</h5>
+              <p>Name: {{i.Name}}<br>
+                 Age: {{i.Age}}<br>
+                 Bus: {{i.Bus.Bus_Name}} <br>
+                 {{i.Bus.From}} <i class="fa-solid fa-arrow-right"></i> {{i.Bus.To}} <br>
+                 Date: {{i.Bus.Date}} <br>
+                 Gender: {{i.Gender}}</p>
+        </div>
+
+        <div style="margin-top: 6%;">
+          <a href="{% url 'ticket-detail' i.id %}"><button style="padding: 15px; background-color:rgba(0, 128, 0, 0.933); border: none; color: white;">View Ticket</button></a>
+         <a href="{% url 'cancel-ticket' i.id %}"><button style="padding: 15px; background-color:rgba(146, 6, 34, 0.9); border: none; color: white;">Cancel Ticket</button></a>
+
+        </div>
+       </div>
+       <!--------Ticket Box end------------------------------------------------------------------------------------------>
+
+      
+      {%endif%}
+    
+      {%endfor%}
+
+    {%else%}
+      
+     <h1 style="text-align: center; padding-top: 100px; padding-bottom: 150px;">Login To See Your Booked Tickets ! <a style="color: red; text-decoration: none;" href="{% url 'login' %}">Login</a></h1>
+
+
+    {%endif%}
+    
+    </table>
+    
+    
+    </div>
+
+{% endblock %}

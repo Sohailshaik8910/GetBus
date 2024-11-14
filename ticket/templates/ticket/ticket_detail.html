@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+
+<!---Ticket Start ------------------------------------------------------------------------------------------------->
+<div style="background: linear-gradient(0deg, rgba(95, 149, 165, 0.421) 0%, rgb(238, 244, 246) 100%);
+padding: 100px;  margin-left: 5%; margin-right: 5%; margin-top: 5%; display: flex; flex-direction: row; justify-content: space-between;">
+<i style="font-size: 180px; width: 500x; margin-top: px;" class="fa-solid fa-barcode"></i>
+
+<div style="margin-left: -18%;">
+    <h5 class=>Ticket No: {{ticket.Ticket_No}}</h5>
+          <p>Name: {{ticket.Name}}<br>
+             Age: {{ticket.Age}}<br>
+             Bus: {{ticket.Bus.Bus_Name}} <br>
+             {{ticket.Bus.From}} <i class="fa-solid fa-arrow-right"></i> {{i.Bus.To}} <br>
+             Date: {{ticket.Bus.Date}} <br>
+             Gender: {{ticket.Gender}}</p>
+</div>
+
+<div>
+    <img src="{% static './images/bus_tit.png' %}" width="180" alt="">
+</div>
+
+<div style="margin-top: 6%;">
+   <a href="{% url 'cancel-ticket' ticket.id %}"><button style="padding: 15px; background-color:rgba(146, 6, 34, 0.9); border: none; color: white;">Cancel Ticket</button></a>
+  </div>
+ </div>
+</div>
+<!---Ticket End------------------------------------------------------------------------------------------------->
+
+<div style="margin-top: 2%; margin-bottom: 3%;">
+    <a href="{% url 'home' %}"><button style=" margin-top: 15px; margin-left: 43.5%; border: none; padding: 10px; padding-left: 20px; padding-right: 20px; background-color: rgba(146, 6, 34, 0.9);" type="submit" class="btn btn-primary">Home</button></a>
+    <a href="{% url 'tickets' %}"><button style=" margin-top: 15px;  border: none; padding: 10px; padding-left: 20px; padding-right: 20px; background-color: rgba(146, 6, 34, 0.9);" type="submit" class="btn btn-primary">Go Back</button></a>
+</div>
+
+
+
+
+{%endblock%}

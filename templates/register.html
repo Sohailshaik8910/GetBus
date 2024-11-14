@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+
+<form action="{% url 'register' %}" method="post">
+  {%csrf_token%}
+
+<div style="display: flex; flex-direction: row; margin-top: 80px; margin-bottom: 50px;">
+
+    <img style="padding-top: 100px;" src="{% static './images/bus.jpg' %}" height="450" alt="">
+
+<!---------Register Box Start---------------------------------------------------------------------------------------------->
+  <div class="login_div" style=" width: 24%; margin-left: 100px;  font-size: 20px;" >
+    <h1  >SignUp to Get<span style="color: rgba(146, 6, 34, 0.9);" >Bus</span></h1>
+    
+    
+  
+  <div style="margin-left: 35px; margin-top: 30px; margin-bottom: 30px;"> 
+  {% for field in form %}
+  
+  {{field.label_tag}}<br/>
+
+  {{field}}<br />
+
+  {%endfor%}
+  </div> 
+
+  <button style=" margin-bottom: 70px; margin-left: 30%; border: none; padding: 10px; padding-left: 20px; padding-right: 20px; background-color: rgba(146, 6, 34, 0.9);" type="submit" class="btn btn-primary">SignUp</button>
+  </div>
+<!---------Register Box End---------------------------------------------------------------------------------------------->
+
+</div>
+
+</form>
+{%endblock%}

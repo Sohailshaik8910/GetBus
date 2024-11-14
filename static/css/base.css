@@ -1,0 +1,157 @@
+
+/*--1.Navbar-----------------------------------------------------------------------*/
+
+#main_logo{
+
+    height: 40px;
+    width: 40px;
+    margin-top: -8px;
+    margin-left: 10px;
+
+}
+
+#title1{
+    margin-left: 5px;
+    margin-right: 22px;
+}
+
+.nav-item{
+    font-size: 20px;
+    a{
+        font-size: large;
+        color: black;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+}
+
+
+.nav-item a:hover{
+    color: #920622;
+}
+
+.navbar-text{
+    margin-right: 20px;
+}
+
+/*---------2. Middle Search Tab----------------------------------------------------------*/
+
+.Middle_box{
+    background-color: rgba(146, 6, 34, 0.9);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.search_box{
+    background-color: white;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18%;
+    border-radius: 10px;
+
+    
+    #search_logo{
+        margin-top: 18px;
+        margin-left: 15px;
+        margin-right: 12px;
+        font-size: 25px;
+    }
+
+    input{
+        font-size: 20px;
+        width: 200px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    #Search_button{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-left: 20px;
+        font-weight: bolder;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        height: 60px;
+    }
+
+    #Search_button:hover{
+        background-color: grey;
+        color: black;
+        border-left: 1px solid grey;
+    }
+
+}
+
+
+
+/*------9.Footer-----------------------------------------------------------------------------------------------------*/
+
+
+.card-text{
+
+    margin-left: 2px;
+
+    i{
+        font-size: 40px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+
+    i:Hover{
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
+
+.card-title{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.footer{
+    background-color: rgba(146, 6, 34, 0.9);
+    color: white;
+}
+
+
+/*-----------Login Start -------------------------------------------------------------------------------------------------------------*/
+
+/* #login_button{  
+    margin-top: 15px;
+    margin-left: 40%;
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(146, 6, 34, 0.9);
+
+} */
+
+/*-----------Login End -------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*-----------Register Start-------------------------------------------------------------------------------------------------------------*/
+
+
+/* #register_button{
+    margin-bottom: 70px;
+    margin-left: 30%; 
+    border: none; 
+    padding: 10px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    background-color: rgba(146, 6, 34, 0.9);
+} */
+
+/*-----------Register End-------------------------------------------------------------------------------------------------------------*/
+
+

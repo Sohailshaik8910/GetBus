@@ -1,0 +1,346 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetBus</title>
+    <link rel="icon" href="{% static './images/bus_tit.png'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="{% static './css/index.css' %}">
+</head>
+<body>
+
+
+  <!----1.Nav Bar---------------------------------------------------------------------------------------------------------->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+    <img id="main_logo" src="{% static './images/bus_tit.png' %}" alt="">
+    <h1 id="title1">Get<span id="title_span" style="color: #920622; ">Bus</span>
+    </h1>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'list' %}"><i class="fa-solid fa-bus"></i> Buses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'tickets' %}"><i style="margin-right: 2px;" class="fa-solid fa-ticket"></i> Track Tickect</a>
+          </li> 
+        </ul>
+        <div class="navbar-text">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {% if request.user.username %}       
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa-solid fa-user"></i> {{request.user.username}}</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </li> 
+
+          {%else%}
+          
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'register'%}"><i class="fa-solid fa-user"></i> SignIn</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}"><i class="fa-solid fa-right-from-bracket"></i> Login</a>
+            </li> 
+          {%endif%}
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+ 
+<!------2. Middle Search Tab------------------------------------------------------------------------------------------------->
+
+<form action="{% url 'search' %} ">
+<div class="Middle_box">
+
+  
+  <div class="search_box">
+    <i id="search_logo" class="fa-solid fa-bus"></i>
+    <input type="text" name="from" placeholder="From">
+    <i id="search_logo" class="fa-solid fa-bus"></i>
+    <input type="text" name="to" placeholder="To">
+    <input type="date" name="date">
+    <input id="Search_button"  type="submit" value="SEARCH BUS">
+  </div>
+</div>
+</form>
+
+<!----3. Trending offer------------------------------------------------------------------------------------------------------>
+
+<div class="slider_main">
+  <h2>TRENDING OFFERS</h2>
+
+  <div class="slider">
+    <div class="card1" style="width: 18rem;">
+      <img src="{% static './images/coupan_1.avif' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"><b>20% OFF Coupon</b> Save upto 20% on bus tickets using this Gift voucher Coupon.</p>
+      </div>
+    </div>
+  
+    <div class="card2" style="width: 18rem;">
+      <img src="{% static './images/coupan_3.avif' %}" height="170" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"><b>50% OFF Coupon</b> Save upto 50% on bus tickets using this Gift voucher Coupon.</p>
+      </div>
+    </div>
+  
+    <div class="card3" style="width: 18rem;">
+      <img src="{% static './images/coupan_2.avif' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"><b>10% OFF Coupon</b> Save upto 10% on bus tickets using this Gift voucher Coupon.</p>
+      </div>
+    </div>
+  
+    <div class="card4" style="width: 18rem;">
+      <img src="{% static './images/coupan_1.avif' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"><b>20% OFF Coupon</b> Save upto 20% on bus tickets using this Gift voucher Coupon.</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!---4. Weekend Offer----------------------------------------------------------------------------------------------------------->
+
+
+<div class="slider_main">
+  <h2 id="title">WEEKEND OFFERS</h2>
+
+  <div class="slider">
+    <div class="card1" style="width: 18rem;">
+      <img src="{% static './images/coupan_1.avif' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"><b>20% OFF Coupon</b> Save upto 20% on bus tickets using this Gift voucher Coupon.</p>
+      </div>
+    </div>
+  
+    <div class="card2" style="width: 18rem;">
+      <img src="{% static './images/coupan_3.avif' %}" height="170" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"><b>50% OFF Coupon</b> Save upto 50% on bus tickets using this Gift voucher Coupon.</p>
+      </div>
+    </div>
+  
+    <div class="card3" style="width: 18rem;">
+      <img src="{% static './images/coupan_2.avif'%}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"><b>10% OFF Coupon</b> Save upto 10% on bus tickets using this Gift voucher Coupon.</p>
+      </div>
+    </div>
+  
+    <div class="card4" style="width: 18rem;">
+      <img src="{% static './images/coupan_1.avif' %} " class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"><b>20% OFF Coupon</b> Save upto 20% on bus tickets using this Gift voucher Coupon.</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<!-------5. Banner Image----------------------------------------------------------------------------------------------------->
+
+<h1 id="paragraph_title"><img id="paragraph_logo" src="{% static './images/bus_tit.png' %}" alt="">
+  <span style="color: #920622;">Get</span>Bus</h1>
+<h6 id="paragraph_p"><span style="color: #920622;" >Get</span>Bus is India’s fastest growing online ticket booking platform. GetBus is the official ticketing partner of several State Road Transport Corporation (SRTC) operators and over 3500+ private bus partners covering more than 100,000 bus routes Book your ride now.</h6>
+
+<div class="image">
+  
+  <img src="{% static './images/grey_bus.jpg' %}" class="img-fluid" alt="...">
+  <button id="button">Book Your Ticket</button>
+  </div> 
+
+
+
+
+
+<!----6.Partner with------------------------------>
+
+
+<div class="Partners">
+  <h2 id="title">PARTNERED WITH</h2>
+
+  <div class="sliders">
+    <div class="cards1" style="width: 18rem;">
+      <img src="{% static './images/APSTRC.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">APSTRC</p>
+      </div>
+    </div>
+  
+    <div class="cards2" style="width: 18rem;">
+      <img src="{% static './images/TSTRC.png' %}" height="170" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">TSTRC</p>
+      </div>
+    </div>
+  
+    <div class="cards3" style="width: 18rem;">
+      <img src="{% static './images/GSRTC.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">GSRTC</p>
+      </div>
+    </div>
+  
+    <div class="cards4" style="width: 18rem;">
+      <img src="{% static './images/RSRTC.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">RSRTC</p>
+      </div>
+    </div>
+
+    <div class="cards5" style="width: 18rem;">
+      <img src="{% static './images/HRTC.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">HRTC</p>
+      </div>
+    </div>
+
+    <div class="cards6" style="width: 18rem;">
+      <img src="{% static './images/UPSTRC.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">UPSTRC</p>
+      </div>
+    </div>
+
+    <div class="cards7" style="width: 18rem;">
+      <img src="{% static './images/KSRTC.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">KSRTC</p>
+      </div>
+    </div>
+
+  </div>
+  
+</div>
+
+
+
+<!--7.Top City slide--------------------------------------------------------------------------->
+
+
+<h2 id="City_heading">Travel To Citys in All Over India with <span style="color: #8B0000;">Get</span>Bus</h2>
+
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <h1 class="city"><i class="fa-solid fa-city"></i> MUMBAI  </h1>
+    </div>
+    <div class="carousel-item">
+      <h1 class="city"><i class="fa-solid fa-city"></i> BANGLORE</h1>
+    </div>
+    <div class="carousel-item">
+      <h1 class="city"><i class="fa-solid fa-city"></i> CHENNAI</h1>
+    </div>
+    <div class="carousel-item">
+      <h1 class="city"><i class="fa-solid fa-city"></i> KOLAKATA</h1>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!---8. 2nd Banner image-------------------------------------------------------------------------------------------------------------------->
+
+<div class="banner">
+<img src="{% static './images/banner2.jpg' %}" class="img-fluid" alt="...">
+</div>
+
+
+
+  
+
+
+
+
+
+
+
+<!-------9. Footer--------------------------------------------------------------------------------------------------------------->
+
+
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+
+<div class="footer">
+  <div class="card-body">
+    <h5 class="card-title">Contact Us</h5>
+    <p class="card-text">
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-telegram"></i>
+      <i class="fa-solid fa-envelope"></i>
+    </p>
+  
+  </div>
+</div>
+  <div class="card-footer text-body-secondary">
+    Ⓒ 2024 Getbus India Pvt Ltd. All rights reserved
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

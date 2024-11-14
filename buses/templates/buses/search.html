@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{%block content %}
+
+
+
+<div  style=" margin-left: 7.7%; display: flex; flex-direction: row; ">
+  <a href="{% url 'bus-type' 'All' %}"> <button style="padding: 20px; border: none; background-color: rgba(146, 6, 34, 0.9); color: white;"  >All</button></a>
+  <a href="{% url 'bus-type' 'AC' %}"> <button style="padding: 20px;  border: none; background-color: rgba(146, 6, 34, 0.9); color: white;"  >AC Bus</button></a>
+ <a href="{% url 'bus-type' 'Non-AC' %}"> <button style="padding: 20px; border: none; background-color: rgba(146, 6, 34, 0.9); color: white;"  >Non/Ac Bus</button></a>
+</div>
+
+
+
+<!---------Buses List Start ------------------------------------------------------------------------>
+<div style="margin-left: 7.7%; margin-right: 10%; margin-bottom: 6.8%">
+  <table width="100%" border="" align="center" cellpadding="30">
+    <tr style=" font-size: 19px; background-color: rgba(146, 6, 34, 0.9); color: white;">
+      <th></th>
+      <th>Bus Name</th>
+      <th>From</th>
+      <th></th>
+      <th>To</th>
+      <th>Bus Type</th>
+      <th>Date</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+
+    {% if Bus %} 
+    {% for i in Bus%}
+    <tr style=" border-bottom: 1px solid black;  ">
+      <td><i style="font-size: 20px" class="fa-solid fa-bus"></i></td>
+      <td>{{i.Bus_Name}}</td>
+      <td>{{i.From}}</td>
+      <td><i class="fa-solid fa-arrow-right"></i></td>
+      <td>{{i.To}}</td>
+      <td>{{i.Bus_Type}}</td>
+      <td>{{i.Date}}</td>
+      <td>{{i.Price}}</td>
+      <td>
+        <a href="{% url 'detail' pk=i.id %}"
+          ><button  style="border:none; padding: 8px; background-color: rgba(146, 6, 34, 0.9); color: white;" type="submit">View Seats </button></a>
+      </td>
+    </tr>
+    {%endfor%} 
+  <!---------Buses List End ------------------------------------------------------------------------>
+
+    
+    {%else%}
+    <tr>
+      <td></td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+
+    {%endif%}
+  </table>
+</div>
+
+{% endblock %}
